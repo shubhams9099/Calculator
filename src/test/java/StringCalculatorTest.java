@@ -4,15 +4,15 @@ public class StringCalculatorTest {
     @Test
     void testNumbersByComma1() {
         StringCalculator sc=new StringCalculator();
-        int expected=10;
-        int actual=sc.Add("1\n2,3\n4");
+        int expected=16;
+        int actual=sc.Add("//;\n11;2;3");
         assertEquals(expected,actual);
     }
     @Test
     void testNumbersByComma2() {
         StringCalculator sc=new StringCalculator();
-        int expected=58;
-        int actual=sc.Add("11\n,3,44");
+        int expected=46;
+        int actual=sc.Add("//;\n11;2;33");
         assertEquals(expected,actual);
     }
 }

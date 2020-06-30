@@ -4,10 +4,14 @@ public class StringCalculator {
         int sum=0;
         if(numbers.length() ==0)
             return sum;
-        Pattern pattern =Pattern.compile("(\\d)*[^\n,](\\d)*");
-        Matcher matcher=pattern.matcher(numbers);
-        while(matcher.find()){
-            sum+= Integer.parseInt(matcher.group());
+        String delimeter="";
+        if(numbers.startsWith("//")){
+            delimeter=numbers.substring(2,3);
+        }
+        String restString=numbers.substring(4);
+        String nums[]=restString.split(delimeter);
+        for (int i = 0; i < nums.length; i++) {
+            sum+=Integer.parseInt(nums[i]);
         }
         return sum;
     }

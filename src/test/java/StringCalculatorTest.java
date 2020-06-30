@@ -12,7 +12,7 @@ public class StringCalculatorTest {
     void testNumbersByComma2() {
         StringCalculator sc=new StringCalculator();
         int expected=46;
-        int actual=sc.Add("//;\n11;2;33");
+        int actual=sc.Add("//;\n11;-2;-33");
         assertEquals(expected,actual);
     }
 }

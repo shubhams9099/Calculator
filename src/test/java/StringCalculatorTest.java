@@ -14,8 +14,8 @@ public class StringCalculatorTest {
     @Test
     void testNumbersByComma2() {
         StringCalculator sc=new StringCalculator();
-        int expected=46;
-        int actual=sc.Add("//;\n11;2;33");
+        int expected=35;
+        int actual=sc.Add("//;\n1001;2;33");
         System.out.println("Method is called: "+sc.GetCalledCount()+" times.");
         assertEquals(expected,actual);
 

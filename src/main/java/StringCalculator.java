@@ -23,8 +23,12 @@ public class StringCalculator {
             if(temp <0){
                 flag =1;
                 msg+=temp+ " ";
-            }else
-                sum+=Integer.parseInt(nums[i]);
+            }else{
+                if(temp >1000)
+                    temp=0;
+                sum+=temp;
+            }
+
         }
         if(flag == 1)
             throw new ArithmeticException(msg);

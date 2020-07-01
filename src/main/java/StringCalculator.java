@@ -1,6 +1,12 @@
 import java.util.regex.*;
 public class StringCalculator {
+    protected static int count=0;
+    public StringCalculator() {
+        int count=0;
+    }
+
     public int Add(String numbers){
+        count+=1;
         int sum=0;
         if(numbers.length() ==0)
             return sum;
@@ -23,5 +29,8 @@ public class StringCalculator {
         if(flag == 1)
             throw new ArithmeticException(msg);
         return sum;
+    }
+    public int GetCalledCount(){
+        return count;
     }
 }
